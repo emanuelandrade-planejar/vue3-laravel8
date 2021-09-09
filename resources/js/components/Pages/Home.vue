@@ -1,20 +1,40 @@
 <template>
-    <div class="w-1/2 bg-white rounded-lg shadow-lg mx-auto p-4">
-        <h1 class="text-2xl text-gray-700 text-center mb-4">
-            Home component
-        </h1>
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, expedita? Officiis autem, omnis hic similique facere tempora culpa animi quisquam commodi illum sapiente error fugiat? Nobis, architecto? Sapiente, laborum sint!
-        </p>
-
-        <list :list="$pageProps.list" />
-    </div>
+    <layout>
+        <segment>
+            <template #title>Título</template>
+            <section class="grid grid-cols-4 gap-4">
+                <card>
+                    <template #header>Título</template>
+                    
+                    Conteúdo
+                </card>
+                <card>
+                    <template #header>Título</template>
+                    
+                    Conteúdo
+                </card>
+                <card>
+                    <template #header>Título</template>
+                    
+                    Conteúdo
+                </card>
+                <card>
+                    <template #header>Título</template>
+                    
+                    Conteúdo
+                </card>
+            </section>
+        </segment>
+    </layout>
 </template>
 
 <script>
+import Card from '../Atoms/Card.vue';
 import List from '../Atoms/List.vue';
+import Segment from '../Atoms/Segment.vue';
+import Layout from '../Templates/Layout.vue';
 
 export default {
-  components: { List },
+  components: { List, Layout, Card, Segment },
 };
 </script>
