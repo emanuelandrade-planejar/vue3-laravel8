@@ -14,7 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome', ["props" => [
-        "list" => [1,2,3,4,5,6]
-    ]]);
+    return view('welcome', [
+        "props" => [
+            "list" => [1,2,3,4,5,6]
+        ],
+        "global" => [
+            "systems" => ["Base", "Importação e Exportação", "Frotas", "Almoxarifado"],
+            "user" => [ "nome" => "José Silva", "idade" => 34 ]
+        ]
+    ]);
 });

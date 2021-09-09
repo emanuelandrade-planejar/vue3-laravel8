@@ -12,5 +12,6 @@ const app = createApp({
 console.log('window.__pageProps :>> ', window.__pageProps);
 
 app.config.globalProperties.$pageProps = window.__pageProps
+app.config.globalProperties.$globalData = window.__globalData
 
 app.mount("#app");
