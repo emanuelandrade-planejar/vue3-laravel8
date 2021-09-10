@@ -1,9 +1,9 @@
 <template>
-    <aside class="bg-gray-600 text-white"><sidebar/></aside>
+    <aside class="text-white"><sidebar/></aside>
 
-    <header class="h-full px-24 py-3 bg-white border-b border-gray-500"><header-toolbar/></header>
+    <header class="h-full px-24 py-3 bg-white border-b border-gray-300"><header-toolbar/></header>
 
-    <main class="bg-gray-100 p-12 h-full"><slot/></main>
+    <main class="bg-gray-200 p-12 h-full overflow-auto"><slot/></main>
 </template>
 
 <script>
@@ -28,6 +28,7 @@ export default {
 aside {
     grid-row: 1 / -1;
     grid-column: 1 / 2;
+    background: #1E293B;
 }
 
 header {
