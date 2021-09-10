@@ -10,6 +10,8 @@
         </div>
     </div>
 
+    <hr class="w-10/12 mx-auto border-gray-100 border-opacity-40 mt-3 mb-5">
+
     <nav>
         <ul>
             <li class="text-lg mx-auto w-full px-5">
