@@ -8,6 +8,10 @@ module.exports = {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
+            margin: {
+                '18': '4.5rem'
+            },
+            minWidth: (theme) => ({ ...theme('spacing'), ...theme('maxWidth') }),
         },
     },
     variants: {
