@@ -10,6 +10,7 @@
     "watch-poll": "mix watch -- --watch-options-poll=1000"
   },
   "dependencies": {
+    "@heroicons/vue": "^1.0.4",
     "@mdi/font": "5.9.55",
     "roboto-fontface": "*",
     "vue": "^3.2.9"
