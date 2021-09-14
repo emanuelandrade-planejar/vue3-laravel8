@@ -39,9 +39,9 @@
                         </select>                
                     </div>
                     
-                    <button class="rounded h-8 px-4 bg-indigo-700 text-white transition-colors ease-in-out duration-150 hover:bg-indigo-800">                        
-                        <span class="">Adicionar Item</span>
-                    </button>
+                    <Button @click="modalForm = true">
+                        Adicionar Item
+                    </Button>
                 </div>
             </template>
 
@@ -118,65 +118,86 @@
 
             <section class="bg-white border border-gray-300 shadow-lg rounded overflow-hidden">               
                 <form class="px-4 py-2">
-                    <div class="my-4">
-                        <label for="name" class="block text-gray-700 font-bold">Nome</label>
-                        <input type="text" name="name" id="name" class="rounded shadow border border-gray-400 h-8 focus:border-indigo-600">
-                    </div>
+                    <InputText type="text" name="name" id="name" label="Nome" />
 
-                    <div class="my-4">
-                        <label for="idade" class="block text-gray-700 font-bold">Idade</label>
-                        <select name="idade" id="idade" class="rounded shadow border border-gray-400 h-8 py-0 focus:border-indigo-600">
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                            <option value="25">25</option>
-                        </select>
-                    </div>
+                    <Select 
+                        id="idade" 
+                        name="idade" 
+                        label="Idade" 
+                        :options="[
+                            { value: 20, label: '20' },
+                            { value: 21, label: '21' },
+                            { value: 22, label: '22' },
+                            { value: 23, label: '23' },
+                            { value: 24, label: '24' },
+                            { value: 25, label: '25' }
+                        ]" 
+                    />
+
+                    <InputRadio 
+                        name="tema" 
+                        label="Tema" 
+                        id="tema-escuro" 
+                        :options="[
+                            { id: 'tema-claro', label: 'Tema Claro' },  
+                            { id: 'tema-escuro', label: 'Tema Escuro' },
+                            { id: 'tema-sistema', label: 'Seguir sistema' },
+                        ]"
+                    />
                     
-                    <div class="my-4">
-                        <label class="block text-gray-700 font-bold">Tema</label>
-
-                        <div class="flex items-center justify-start my-2">
-                            <input type="radio" name="tema" id="tema-escuro">
-                            <label for="tema-escuro" class="ml-2 text-gray-700">Tema Escuro</label>
-                        </div>
-
-                        <div class="flex items-center justify-start my-2">
-                            <input type="radio" name="tema" id="tema-claro">
-                            <label for="tema-claro" class="ml-2 text-gray-700">Tema Claro</label>
-                        </div>
-
-                        <div class="flex items-center justify-start my-2">
-                            <input type="radio" name="tema" id="sistema">
-                            <label for="sistema" class="ml-2 text-gray-700">Seguir sistema</label>
-                        </div>
-                    </div>
+                    <Checkbox id="aceite-termos-condicoes" name="aceite-termos-condicoes" label="Li e aceito os Termos e Condições" />
                     
-                    <div class="my-4">
-                        <div class="flex items-center justify-start my-2">
-                            <input type="checkbox" name="aceite-termos-condicoes" id="aceite-termos-condicoes">
-                            <label for="aceite-termos-condicoes" class="ml-2 text-gray-700">Li e aceito os Termos e Condições</label>
-                        </div>
-
-                        <div class="flex items-center justify-start my-2">
-                            <input type="checkbox" name="aceite-privacidade" id="aceite-privacidade">
-                            <label for="aceite-privacidade" class="ml-2 text-gray-700">Li e aceito a Política de Privacidade</label>                        </div>
-                    </div>
+                    <Checkbox id="aceite-privacidade" name="aceite-privacidade" label="Li e aceito a Política de Privacidade" />
                 </form>
             </section>
         </segment>
+
+        <Toastr v-if="toastInfo" @click="toastInfo = false" type="info" title="Você sabia?" description="Aqui está uma coisa que você pode gostar!" />
+        
+        <Toastr v-if="toastForm" @click="toastForm = false" type="success" title="Concluído" description="Item foi criado com sucesso" />
+
+        <Modal v-model="modalForm" title="Adicionar novo Item">
+            <InputText type="text" name="item-1" id="item-1" label="Item 1" />            
+            <InputText type="text" name="item-2" id="item-2" label="Item 2" />            
+            <InputText type="text" name="item-3" id="item-3" label="Item 3" />            
+
+            <template #footer>
+                <Button
+                    @click="() => {
+                        toastForm = true;
+                        modalForm = false;
+                    }"
+                >
+                  Salvar
+                </Button>
+            </template>
+        </Modal>
     </layout>
 </template>
 
 <script>
+import { ref } from '@vue/reactivity';
+
 import Card from '../Atoms/Card.vue';
 import List from '../Atoms/List.vue';
+import Modal from '../Atoms/Modal.vue';
+import Button from '../Atoms/Button.vue';
 import Segment from '../Atoms/Segment.vue';
 import Layout from '../Templates/Layout.vue';
+import Select from '../Atoms/form/Select.vue';
+import Toastr from '../Atoms/Toastr/Toastr.vue';
+import Checkbox from '../Atoms/form/Checkbox.vue';
+import InputText from '../Atoms/form/InputText.vue';
+import InputRadio from '../Atoms/form/InputRadio.vue';
 
 export default {
-  components: { List, Layout, Card, Segment },
+    components: { List, Layout, Card, Segment, Button, Select, InputText, InputRadio, Checkbox, Modal, Toastr },
+    setup() {
+        const toastInfo = ref(true)
+        const toastForm = ref(false)
+        const modalForm = ref(false)
+
+        return { toastInfo, toastForm, modalForm }
+    }
 };
 </script>

@@ -28,7 +28,7 @@
                         }"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></span>
                     </span>
 
-                    <ul class="ml-4 transform translate-y-0 transition-all ease-in-out" :class="{
+                    <ul class="ml-2 transform translate-y-0 transition-all ease-in-out" :class="{
                         'opacity-0 h-0 -translate-y-2': !systemListIsOpen
                     }">
                         <li v-for="system in $globalData.systems" :key="system" class="rounded px-2 py-1 hover:bg-gray-400">{{ system }}</li>
