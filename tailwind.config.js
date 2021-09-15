@@ -11,6 +11,7 @@ module.exports = {
             margin: {
                 '18': '4.5rem'
             },
+            minHeight: (theme) => ({ ...theme('spacing') }),
             minWidth: (theme) => ({ ...theme('spacing'), ...theme('maxWidth') }),
         },
     },
