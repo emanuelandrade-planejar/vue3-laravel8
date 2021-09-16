@@ -1,6 +1,8 @@
 <template>
     <Layout>
-        <Segment>
+        <Alert type="warning" title="Título do alerta" description="Mensagem de exemplo do alerta" />
+
+        <Segment class="mt-10">
             <template #title>Abas</template>
 
             <section class="bg-white border border-gray-300 shadow-lg rounded overflow-hidden">               
@@ -75,7 +77,7 @@
                     </Tab>
 
                     <Tab title="Criar">
-                          <form class="px-4 py-2 mb-2">
+                          <form class="px-4 py-2 mb-2 w-80">
                             <InputText type="text" name="item-1" id="item-1" label="Item 1" />
 
                             <InputText type="text" name="item-2" id="item-2" label="Item 2" />
@@ -89,7 +91,7 @@
                     </Tab>
                     
                     <Tab title="Editar">
-                          <form class="px-4 py-2 mb-2">
+                          <form class="px-4 py-2 mb-2 w-80">
                             <InputText type="text" name="item-1" id="item-1" label="Item 1" modelValue="Corpo 1" />
 
                             <InputText type="text" name="item-2" id="item-2" label="Item 2" modelValue="Corpo 2" />
@@ -221,7 +223,7 @@
             <template #title>Formulário</template>
 
             <section class="bg-white border border-gray-300 shadow-lg rounded overflow-hidden">               
-                <form class="px-4 py-2">
+                <form class="px-4 py-2 w-80">
                     <InputText type="text" name="name" id="name" label="Nome" />
 
                     <Select 
@@ -238,7 +240,7 @@
                         ]" 
                     />
 
-                    <InputRadio 
+                    <InputRadio           
                         name="tema" 
                         label="Tema" 
                         id="tema-escuro" 
@@ -261,9 +263,11 @@
         <Toastr v-if="toastForm" @click="toastForm = false" type="success" title="Concluído" description="Item foi criado com sucesso" />
 
         <Modal v-model="modalForm" title="Adicionar novo Item">
-            <InputText type="text" name="item-1" id="item-1" label="Item 1" />            
-            <InputText type="text" name="item-2" id="item-2" label="Item 2" />            
-            <InputText type="text" name="item-3" id="item-3" label="Item 3" />            
+            <form class="w-56">
+                <InputText type="text" name="item-1" id="item-1" label="Item 1" />
+                <InputText type="text" name="item-2" id="item-2" label="Item 2" />
+                <InputText type="text" name="item-3" id="item-3" label="Item 3" />
+            </form>
 
             <template #footer>
                 <Button
@@ -286,6 +290,7 @@ import Tab from '../Atoms/Tab.vue';
 import Card from '../Atoms/Card.vue';
 import List from '../Atoms/List.vue';
 import Tabs from '../Atoms/Tabs.vue';
+import Alert from '../Atoms/Alert.vue';
 import Modal from '../Atoms/Modal.vue';
 import Button from '../Atoms/Button.vue';
 import Segment from '../Atoms/Segment.vue';
@@ -297,7 +302,7 @@ import InputText from '../Atoms/form/InputText.vue';
 import InputRadio from '../Atoms/form/InputRadio.vue';
 
 export default {
-    components: { Tab, List, Layout, Card, Segment, Button, Select, InputText, InputRadio, Checkbox, Modal, Toastr, Tabs },
+    components: { Tab, List, Layout, Card, Segment, Button, Select, InputText, InputRadio, Checkbox, Modal, Toastr, Tabs, Alert },
     setup() {
         const toastInfo = ref(true)
         const toastForm = ref(false)
