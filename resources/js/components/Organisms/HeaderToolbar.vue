@@ -3,44 +3,51 @@
         <div>
 
         </div>
+        
+        <div class="w-2/5">
+            <InputText class="w-full">
+                <template #icon>
+                    <SearchIcon />
+                </template>
+            </InputText>
+        </div>
 
         <div class="min-w-28">
             <nav class="w-full flex flex-row items-center justify-around">
-                <dropdown title="Notificações">
+                <Dropdown title="Notificações">
                     <template #anchor>
-                        <div class="relative w-8 h-8 flex flex-row items-center justify-start rounded py-2 px-2 hover:bg-gray-300">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
-                            <span class="bg-red-500 w-4 h-4 mb-1 ml-1 flex items-center justify-center rounded-full absolute top-0 right-0 text-xs text-white">8</span>
+                        <div class="relative w-9 h-9 flex flex-row items-center justify-start rounded py-2 px-2 hover:bg-gray-300">
+                            <BellIcon class="w-6 h-6" />
+                            <span class="bg-red-500 w-3 h-3 mt-0.5 mr-0.5 flex items-center justify-center rounded-full absolute top-0 right-0 text-xs text-white"></span>
                         </div>
                     </template>
 
                     <template #content>
                         <ul>
                             <li class="mb-2">
-                                <strong class="block leading-tight text-sm text-indigo-900">Nova mensagem</strong>
-                                <span class="block leading-tight text-sm">Uma nova mensagem chegou!</span>
+                                <strong class="block leading-tight text-indigo-900">Nova mensagem</strong>
+                                <span class="block leading-tight">Uma nova mensagem chegou!</span>
                             </li>
                             <li>
-                                <strong class="block leading-tight text-sm text-indigo-900">Nova mensagem</strong>
-                                <span class="block leading-tight text-sm">Uma nova mensagem chegou!</span>
+                                <strong class="block leading-tight text-indigo-900">Nova mensagem</strong>
+                                <span class="block leading-tight">Uma nova mensagem chegou!</span>
                             </li>
                         </ul>
                     </template>
-                </dropdown>
-
-                <div class="relative w-8 h-8 flex flex-row items-center justify-start rounded py-2 px-2 hover:bg-gray-300">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>                    
-                </div>
+                </Dropdown>
             </nav>
         </div>
     </section>
 </template>
 
 <script>
+import { BellIcon, SearchIcon } from "@heroicons/vue/outline";
+
 import Dropdown from "../Atoms/Dropdown.vue";
+import InputText from '../Atoms/form/InputText.vue';
 
 export default {
-    components: { Dropdown },
+    components: { BellIcon, Dropdown, InputText, SearchIcon },
 }
 </script>
 
