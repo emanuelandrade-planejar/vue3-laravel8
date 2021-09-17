@@ -1,7 +1,7 @@
 <template>
     <aside class="text-white"><sidebar/></aside>
 
-    <header class="h-full px-24 py-3 bg-white border-b border-gray-300"><header-toolbar/></header>
+    <header class="h-full px-12 py-3 bg-white border-b border-gray-300"><header-toolbar/></header>
 
     <main class="bg-gray-200 p-12 h-full overflow-auto"><slot/></main>
 </template>
