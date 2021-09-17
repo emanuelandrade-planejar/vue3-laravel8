@@ -1,17 +1,13 @@
 require("./bootstrap");
+
 import { createApp } from "vue";
 
-import Home from "./components/Pages/Home.vue"
+import App from "./App.vue";
 
-const app = createApp({
-    components: {
-        Home
-    }
-});
+const app = createApp(App);
 
-console.log('window.__pageProps :>> ', window.__pageProps);
-
-app.config.globalProperties.$pageProps = window.__pageProps
-app.config.globalProperties.$globalData = window.__globalData
+app.config.globalProperties.$pageProps = window.__pageProps;
+app.config.globalProperties.$globalData = window.__globalData;
+app.config.globalProperties.$currentPage = window.__currentPage;
 
 app.mount("#app");
