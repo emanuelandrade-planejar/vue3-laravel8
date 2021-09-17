@@ -1,7 +1,7 @@
 <template>
     <section class="h-full flex flex-row items-center justify-between">
         <div>
-
+            <Button as="a" href="/sistemas">Sistemas</Button>
         </div>
         
         <div class="w-2/5">
@@ -13,7 +13,7 @@
         </div>
 
         <div class="min-w-28">
-            <nav class="w-full flex flex-row items-center justify-around">
+            <nav class="w-full flex flex-row items-center justify-end">
                 <Dropdown title="Notificações">
                     <template #anchor>
                         <div class="relative w-9 h-9 flex flex-row items-center justify-start rounded py-2 px-2 hover:bg-gray-300">
@@ -43,11 +43,12 @@
 <script>
 import { BellIcon, SearchIcon } from "@heroicons/vue/outline";
 
+import Button from '../Atoms/Button.vue';
 import Dropdown from "../Atoms/Dropdown.vue";
 import InputText from '../Atoms/form/InputText.vue';
 
 export default {
-    components: { BellIcon, Dropdown, InputText, SearchIcon },
+    components: { BellIcon, Dropdown, InputText, SearchIcon, Button },
 }
 </script>
 
