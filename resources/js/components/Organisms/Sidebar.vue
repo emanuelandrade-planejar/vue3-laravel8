@@ -31,7 +31,7 @@
                     <ul class="ml-2 transform translate-y-0 transition-all ease-in-out" :class="{
                         'opacity-0 h-0 -translate-y-2': !systemListIsOpen
                     }">
-                        <li v-for="system in $globalData.systems" :key="system" class="rounded px-2 py-1 hover:bg-gray-400">{{ system }}</li>
+                        <li v-for="system in $globalData.systems" :key="system.name" class="rounded px-2 py-1 hover:bg-gray-400">{{ system.name }}</li>
                     </ul>
                 </div>
             </li>
