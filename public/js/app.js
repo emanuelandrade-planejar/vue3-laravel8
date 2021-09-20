@@ -25637,7 +25637,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)((0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDynamicComponent)($props.as), {
-    "class": "flex items-center h-8 px-4 rounded bg-indigo-700 text-white transition-colors ease-in-out duration-150 hover:bg-indigo-800"
+    "class": "flex items-center justify-center h-8 px-4 rounded bg-indigo-700 text-white transition-colors ease-in-out duration-150 hover:bg-indigo-800"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")])];
@@ -25722,7 +25722,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, [!!((_ctx$$slots = _ctx.$slots) !== null && _ctx$$slots !== void 0 && (_ctx$$slots$icon = _ctx$$slots.icon) !== null && _ctx$$slots$icon !== void 0 && _ctx$$slots$icon.call(_ctx$$slots)) ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
     key: 0,
-    "class": "icon h-full flex items-center text-gray-800",
+    "class": "icon flex items-center h-full mx-1 text-gray-800",
     onClick: _cache[0] || (_cache[0] = function () {
       return $setup.focusOnINput && $setup.focusOnINput.apply($setup, arguments);
     })
@@ -25777,7 +25777,7 @@ var _hoisted_6 = {
 };
 
 var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-  "class": "bg-red-500 w-3 h-3 mt-0.5 mr-0.5 flex items-center justify-center rounded-full absolute top-0 right-0 text-xs text-white"
+  "class": "bg-red-500 w-3 h-3 mt-1 mr-1 flex items-center justify-center rounded-full absolute top-0 right-0 text-xs text-white"
 }, null, -1
 /* HOISTED */
 );
@@ -25859,7 +25859,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"mx-auto w-4/5 mt-8 mb-4\"><h3 class=\"font-bold text-2xl\">Siplan Cloud</h3><div class=\"mx-auto w-full mb-8 mt-1.5 flex flex-row items-center\"><div class=\"mr-2\"><svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg></div><strong>José Silva</strong></div></div><hr class=\"w-10/12 mx-auto border-gray-100 border-opacity-40 mt-3 mb-5\">", 2);
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"mx-auto w-4/5 mt-8 mb-4\"><a class=\"font-bold text-2xl\" href=\"/\">Siplan Cloud</a><div class=\"mx-auto w-full mb-8 mt-1.5 flex flex-row items-center\"><div class=\"mr-2\"><svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg></div><strong>José Silva</strong></div></div><hr class=\"w-10/12 mx-auto border-gray-100 border-opacity-40 mt-3 mb-5\">", 2);
 
 var _hoisted_3 = {
   "class": "text-lg mx-auto w-full px-5"
@@ -27188,13 +27188,25 @@ function compileToFunction(template, options) {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
+	"./Crud.vue": [
+		"./resources/js/components/Pages/Crud.vue",
+		"resources_js_components_Pages_Crud_vue"
+	],
 	"./Home.vue": [
 		"./resources/js/components/Pages/Home.vue",
 		"resources_js_components_Pages_Home_vue"
 	],
+	"./Signup.vue": [
+		"./resources/js/components/Pages/Signup.vue",
+		"resources_js_components_Pages_Signup_vue"
+	],
 	"./Systems.vue": [
 		"./resources/js/components/Pages/Systems.vue",
 		"resources_js_components_Pages_Systems_vue"
+	],
+	"./Tabs.vue": [
+		"./resources/js/components/Pages/Tabs.vue",
+		"resources_js_components_Pages_Tabs_vue"
 	]
 };
 function webpackAsyncContext(req) {
@@ -27321,7 +27333,7 @@ module.exports = webpackAsyncContext;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Pages_Home_vue":1,"resources_js_components_Pages_Systems_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Pages_Crud_vue":1,"resources_js_components_Pages_Home_vue":1,"resources_js_components_Pages_Signup_vue":1,"resources_js_components_Pages_Systems_vue":1,"resources_js_components_Pages_Tabs_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

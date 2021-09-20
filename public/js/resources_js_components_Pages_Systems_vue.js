@@ -301,16 +301,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "bg-white shadow-lg rounded overflow-hidden"
+  "class": "flex flex-col justify-between bg-white shadow-lg rounded overflow-hidden"
 };
 var _hoisted_2 = {
   "class": "w-full py-3 px-4 text-white font-bold bg-indigo-600"
 };
 var _hoisted_3 = {
-  "class": "py-3 px-4"
+  "class": "py-3 px-4 pr-10"
+};
+var _hoisted_4 = {
+  key: 0,
+  "class": "w-full py-3 px-4 bg-gray-100 border-t border-gray-300 border-opacity-70"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "header")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")])]);
+  var _ctx$$slots, _ctx$$slots$footer;
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "header")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")]), !!((_ctx$$slots = _ctx.$slots) !== null && _ctx$$slots !== void 0 && (_ctx$$slots$footer = _ctx$$slots.footer) !== null && _ctx$$slots$footer !== void 0 && _ctx$$slots$footer.call(_ctx$$slots)) ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("footer", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "footer")])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);
 }
 
 /***/ }),
@@ -528,7 +534,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     title: "Título do alerta",
     description: "Mensagem de exemplo do alerta"
   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Segment, {
-    "class": "mt-20"
+    "class": "mt-10"
   }, {
     title: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_1];
