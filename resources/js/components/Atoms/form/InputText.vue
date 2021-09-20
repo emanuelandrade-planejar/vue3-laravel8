@@ -10,7 +10,7 @@
             }"
             @click="focusOnINput"
         >
-            <div v-if="!!$slots?.icon?.()" class="icon h-full flex items-center text-gray-800" @click="focusOnINput">
+            <div v-if="!!$slots?.icon?.()" class="icon flex items-center h-full mx-1 text-gray-800" @click="focusOnINput">
                 <slot name="icon" />
             </div>
 
