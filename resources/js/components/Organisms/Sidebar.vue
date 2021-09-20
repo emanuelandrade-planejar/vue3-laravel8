@@ -1,6 +1,6 @@
 <template>
     <div class="mx-auto w-4/5 mt-8 mb-4">
-        <h3 class="font-bold text-2xl">Siplan Cloud</h3>
+        <a class="font-bold text-2xl" href="/">Siplan Cloud</a>
   
         <div class="mx-auto w-full mb-8 mt-1.5 flex flex-row items-center">
             <div class="mr-2">
