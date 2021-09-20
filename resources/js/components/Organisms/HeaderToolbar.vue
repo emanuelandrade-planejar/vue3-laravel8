@@ -18,7 +18,7 @@
                     <template #anchor>
                         <div class="relative w-9 h-9 flex flex-row items-center justify-start rounded py-2 px-2 hover:bg-gray-300">
                             <BellIcon class="w-6 h-6" />
-                            <span class="bg-red-500 w-3 h-3 mt-0.5 mr-0.5 flex items-center justify-center rounded-full absolute top-0 right-0 text-xs text-white"></span>
+                            <span class="bg-red-500 w-3 h-3 mt-1 mr-1 flex items-center justify-center rounded-full absolute top-0 right-0 text-xs text-white"></span>
                         </div>
                     </template>
 
