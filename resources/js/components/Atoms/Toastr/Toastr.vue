@@ -1,5 +1,7 @@
 <template>
-    <section class="absolute top-0 right-0 z-40 mr-5 mt-18 bg-white shadow-lg rounded px-4 py-3 flex flex-row items-center justify-between">
+    <section 
+        class="absolute top-0 right-0 z-40 mr-5 mt-18 bg-white shadow-lg rounded px-4 py-3 flex flex-row items-center justify-between"
+    >
         <InfoSign v-if="type === 'info'" />
         <AlertSign v-if="type === 'alert'" />
         <ErrorSign v-if="type === 'error'" />
