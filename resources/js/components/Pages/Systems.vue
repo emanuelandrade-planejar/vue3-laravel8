@@ -1,7 +1,7 @@
 <template>
     <Alert type="warning" title="Título do alerta" description="Mensagem de exemplo do alerta" />
 
-    <Segment class="mt-20">
+    <Segment class="mt-10">
         <template #title>Título</template>
         <section class="grid grid-cols-4 gap-4">
             <Card 
